@@ -1,0 +1,30 @@
+.form-control{
+    width: 350px;
+    margin: 5px;
+    margin-left: 10px;
+}
+.form-contro{
+    width: 100px;
+    
+}
+.Nom{
+    width: 350px;
+}
+
+#flexCheckDefault{
+    width: 150PX;
+}
+.btn{
+    margin-left:450px ;
+    border: 1px solid white;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(57, 57, 248);
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+}
+td{
+    border: 1px solid gray;
+    padding: 10px;
+}
