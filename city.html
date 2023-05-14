@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="city.css">
+
+<div class="container right-panel-active">
+	<!-- Sign Up -->
+	<div class="container__form container--signup">
+		<form action="#" class="form" id="form1">
+			<h2 class="form__title" style="color:rgb(58, 118, 220);font-weight:bold;text-decoration:underline">WeatherMap</h2>
+            <label for="ville">Enter your City:</label>
+			<input type="text" placeholder="User" class="input" id="ville" />
+			<button class="btn" id="btnn">Sign Up</button>
+		</form>
+	</div>
+
+	<!-- Overlay -->
+	<div class="container__overlay">
+		<div class="overlay">
+			<div class="overlay__panel overlay--right">
+				<button class="btn" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+const a = document.getElementById("btnn");
+a.addEventListener("click",mfm);
+function mfm(){
+    var xhr = new XMLHttpRequest();
+    let city = document.getElementById("ville").value;
+    let key = "44fd01b37c2d99714f0bd3f6b568428f";
+    let lien = 'https://api.openweathermap.org/data/2.5/weather?q='+city+'&appid='+key;
+    xhr.open("POST", lien, true);
+    xhr.send();
+
+
+    xhr.onreadystatechange = function() { 
+    if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+        console.log(this.responseText);
+		let json = JSON.parse(this.responseText);
+		console.log(json.coord);
+    }
+}
+
+}
+
+</script>
